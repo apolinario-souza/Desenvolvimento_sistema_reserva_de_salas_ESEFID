@@ -30,9 +30,99 @@
             width: 150px; /* Ajuste conforme necessário */
         }  
 		}
+		 <style>
+        body {
+          font-family: Arial, sans-serif;
+          background-color: #f4f4f4;
+            margin: 0;
+          padding: 20px;
+        }
+      
+      .container {
+        max-width: 800px;
+        margin: 0 auto;
+        background-color: white;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      }
+      
+      .header {
+        background-color: #d83e3e;
+          color: white;
+        padding: 20px;
+        text-align: center;
+        border-top-left-radius: 8px;
+        border-top-right-radius: 8px;
+      }
+      
+      .header h1 {
+        margin: 0;
+        font-size: 24px;
+      }
+      
+      .header p {
+        margin: 5px 0 0;
+        font-size: 16px;
+      }
+      
+      .content {
+        padding: 20px;
+      }
+      
+      .content h2 {
+        color: #d83e3e;
+          text-align: center;
+        font-size: 18px;
+        margin-bottom: 20px;
+      }
+      
+      .rule-list {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+      }
+      
+      .rule-item {
+        margin-bottom: 15px;
+        padding: 10px;
+        background-color: #f7f7f7;
+          border-left: 4px solid #d83e3e;
+        border-radius: 4px;
+      }
+      
+      .rule-item strong {
+        font-weight: bold;
+        color: #d83e3e;
+      }
+     
 	</style>
 </head>
 <body>
+
+<div class="container">
+    <div class="header">
+        <h1>RESERVA DE ESPAÇOS - ESEFID</h1>
+        <p>Núcleo Infraestrutura</p>
+    </div>
+
+    <div class="content">
+        <h2>REGRAS PARA UTILIZAÇÃO DE ESPAÇOS DA ESEFID/UFRGS</h2>
+        <ul class="rule-list">
+            <li class="rule-item"><strong>1.</strong> A reserva de salas de aula e espaços em geral da ESEFID são de exclusividade para atividades de ensino, pesquisa e extensão da Universidade. Prioritariamente para atividades de Graduação e Pós-Graduação;</li>
+            <li class="rule-item"><strong>2.</strong>  A reservar deverá ser realizada sempre com no mínimo 24 horas de antecedência, <strong>por um SERVIDOR (Docente ou Técnico) da UFRGS, através do seu e-mail Institucional;</strong></li>
+            <li class="rule-item"><strong>3.</strong> O solicitante receberá a confirmação ou negativa de reserva em <strong>até 72h</strong> após o envio do formulário (desconsiderar finais de semana);</li>
+            <li class="rule-item"><strong>4.</strong> Em caso de sala de aula, é de responsabilidade do usuário efetuar o trancamento da sala, fechar as janelas, desligar as luzes e equipamentos eletrônicos. As mesas e cadeiras deverão ser recolocadas nos lugares de origem antes da devolução do espaço e as chaves na Infraestrutura da ESEFID;</li>
+            <li class="rule-item"><strong>5.</strong> Em caso de outros espaços (ex., Ginásio_), é de responsabilidade do usuário efetuar toda organização da forma que se encontra na entrada (ex., organizar os equipamentos/materias e desligar as luzes e entregar as chaves na Infraestrutura da ESEFI;</li>
+            <li class="rule-item"><strong>6.</strong> O uso desses espaços por outras Unidades/Órgãos da UFRGS depende de análise e aprovação da Direção da Unidade;</li>
+            <li class="rule-item"><strong>7.</strong> Os alunos monitores da ESEFID que necessitarem de espaço físico para uso acadêmico devem solicitar a reserva por intermédio do orientador/professor responsável da disciplina/projeto/ação;</li>
+            <li class="rule-item"><strong>8.</strong> Não será autorizada a retirada de chaves por parte de alunos <strong>sem autorização prévia</strong> ;</li>
+            <li class="rule-item"><strong>9.</strong> A reserva estará confirmada somente após o retorno por e-mail do Núcleo de Infraestrutura.</li>
+        </ul>
+    </div>
+</div>
+
+
+
 	<div id="formulario">
 		<h2>Dados do solicitante</h2>
 		<form action="enviarInfraestrutura.php" method="post">

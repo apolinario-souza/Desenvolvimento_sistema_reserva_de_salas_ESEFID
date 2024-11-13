@@ -2,6 +2,8 @@
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $solicitante = htmlspecialchars($_POST['solicitante']);
     $email = htmlspecialchars($_POST['email']);
+    $vinculo = htmlspecialchars($_POST['vinculo']);
+    $outrovinculo = htmlspecialchars($_POST['outrovinculo']);
     $cartao = htmlspecialchars($_POST['cartao']);
     $telefone = htmlspecialchars($_POST['telefone']);
     $unidade = htmlspecialchars($_POST['unidade']);
@@ -11,7 +13,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $periodo2 = htmlspecialchars($_POST['periodo2']);
     $horario1 = htmlspecialchars($_POST['horario1']);
     $horario2 = htmlspecialchars($_POST['horario2']);
-    
+    $tituloprojeto = htmlspecialchars($_POST['tituloprojeto']);
     $nocupantes = htmlspecialchars($_POST['nocupantes']);
     $resposavel = htmlspecialchars($_POST['resposavel']);
     $resposavelcartao = htmlspecialchars($_POST['resposavelcartao']);
@@ -27,16 +29,18 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     
     $body = "Solicitante: $solicitante\n
     E-mail: $email\n
-    
+    Vinculo: $vinculo\n
+    Outro: $outrovinculo\n
     Telefone: $telefone\n
-    Cartão UFRGS nº: $cartao\n
+    Cartao UFRGS n: $cartao\n
     Unidade: $unidade\n
-    Espaço: $espaco\n
+    Espaco: $espaco\n
     Data:  $periodo1 - $periodo2\n
-    Horário:  $horario1 - $horario2\n
-    Nº Ocupantes: $nocupantes\n
+    Horario:  $horario1 - $horario2\n
+    Titulo: $tituloprojeto\n
+    N Ocupantes: $nocupantes\n
     Responsável pela chave: $resposavel\n
-    Nº pesponsável pela chave: $resposavelcartao\n
+    N pesponsável pela chave: $resposavelcartao\n
     
     
     Observaões: \n$observacoes\n";

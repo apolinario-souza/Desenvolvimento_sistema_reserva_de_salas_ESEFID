@@ -102,7 +102,7 @@
 <div class="container">
     <div class="header">
         <h1>RESERVA DE ESPAÇOS - ESEFID</h1>
-        <p>Núcleo Infraestrutura</p>
+        <p>Laboratório de Pesquisa do Exercício - LAPEX</p>
     </div>
 
     <div class="content">
@@ -139,6 +139,18 @@
       <label for="cartao">Cartão UFRGS nº:</label>
       <input type="text" id="cartao" name="cartao" required>
 		
+			
+			<label for="vinculo">Vínculo com UFRGS:</label>
+            <select id="vinculo" name="vinculo" required>
+                <option value="Servidor">Servidor</option>
+                <option value="Discente">Discente</option>
+                <option value="Outro">Outro</option>
+        </select>
+      <label for="outrovinculo">Se outro, especifique:</label>
+      <input type="text" id="outrovinculo" name="outrovinculo">  
+      
+      
+        
       <label for="unidade">Unidade:</label>
             <select id="unidade" name="unidade" required>
                 <option value="Campus Litoral Norte">Campus Litoral Norte</option>
@@ -168,7 +180,6 @@
                 <option value="Instituto de Pesquisas Hidráulicas">Instituto de Pesquisas Hidráulicas</option>
                 <option value="Instituto de Psicologia">Instituto de Psicologia</option>
                 <option value="Instituto de Química">Instituto de Química</option>
-                
         </select>
       
       
@@ -181,10 +192,10 @@
           <option value="Sala 104">Sala 104</option>
           <option value="Sala 106">Sala 106</option>
           <option value="Sala CEME">Sala CEME</option>
-          <option value="Sala MUSEU">Sala MUSEU</option>
-          <option value="Sala PPG">Sala PPG</option>
-          <option value="Sala Ritmica">Sala Ritmica</option>
-          <option value="Sala de reuniões do administrativo">Sala de reuniões do administrativo</option>
+                <option value="Sala MUSEU">Sala MUSEU</option>
+                <option value="Sala PPG">Sala PPG</option>
+                <option value="Sala Ritmica">Sala Ritmica</option>
+                <option value="Sala de reuniões do administrativo">Sala de reuniões do administrativo</option>
                 <option value="Campo de Futebol">Campo Futebol</option>
                 <option value="Ginásio G1 - Quandra 1">Ginásio G1 - Quandra 1</option>
                 <option value="Ginásio G1 - Quandra 2">Ginásio G1 - Quandra 2</option>
@@ -204,6 +215,8 @@
         <input type="time" name="horario2" id="horario2"  size="20" placeholder="hh:mm" required >
         </div>
         
+        <label for="tituloprojeto">Título do projeto de pesquisa aprovado:</label>
+        <input type="text" id="tituloprojeto" name="tituloprojeto" required>
         
         <label for="nocupantes">Nº ocupantes:</label>
         <input type="text" id="nocupantes" name="nocupantes" required>

@@ -106,7 +106,7 @@
     </div>
 
     <div class="content">
-        <h2>REGRAS PARA UTILIZAÇÃO</h2>
+        <h2>REGRAS PARA UTILIZAÇÃO DA SALA DE SEMINÁRIOS - 203</h2>
         <ul class="rule-list">
             <li class="rule-item"><strong>1.</strong> A reserva de salas de aula e espaços em geral da ESEFID são de exclusividade para atividades de ensino, pesquisa e extensão da Universidade. Prioritariamente para atividades de Graduação e Pós-Graduação;</li>
             <li class="rule-item"><strong>2.</strong>  A reservar deverá ser realizada sempre com no mínimo 24 horas de antecedência, <strong>por um SERVIDOR (Docente ou Técnico) da UFRGS, através do seu e-mail Institucional;</strong></li>
@@ -125,7 +125,7 @@
 
 	<div id="formulario">
 		<h2>Dados do solicitante</h2>
-		<form action="enviarLapex.php" method="post">
+		<form action="enviarSalaSeminarios.php" method="post">
 			
 			<label for="solicitante">Solicitante:</label>
 			<input type="text" id="solicitante" name="solicitante" required>
@@ -136,9 +136,21 @@
       <label for="telefone">Telefone:</label>
       <input type="text" id="telefone" name="telefone" required>
       
-      <label for="cartao">Cartão UFRGS nº:</label>
-      <input type="text" id="cartao" name="cartao" required>
-		
+     	<label for="finalidade">Finalidade:</label>
+            <select id="finalidade" name="finalidade" required>
+               
+                <option value="aulaposgraduacao">Aula de pós-graduação</option>
+                <option value="eventos">Evento</option>
+                <option value="especializacao">Aula especialização</option>
+                <option value="defesa">Defesa mestrado/doutorado</option>
+                <option value="qualificacao">Qualificação mestrado/doutorado</option>
+                <option value="tccespecializacao">TCC especialização</option>
+                <option value="reunioesgrupos">Reuniões de grupos de pesquisa</option>
+                <option value="tccgraducao">TCC graduação</option>
+                <option value="outros">Outros</option>
+                      
+                
+        </select>
 			
 			<label for="vinculo">Vínculo com UFRGS:</label>
             <select id="vinculo" name="vinculo" required>
@@ -153,25 +165,7 @@
       
       
       <h2>Dados da reserva</h2>
-      <label for="espaco">Espaço:</label>
-      <select id="espaco" name="espaco" required>
-          <option value="Sala 101">Sala 101</option>
-          <option value="Sala 102">Sala 102</option>
-          <option value="Sala 103">Sala 103</option>
-          <option value="Sala 104">Sala 104</option>
-          <option value="Sala 106">Sala 106</option>
-          <option value="Sala CEME">Sala CEME</option>
-                <option value="Sala MUSEU">Sala MUSEU</option>
-                <option value="Sala PPG">Sala PPG</option>
-                <option value="Sala Ritmica">Sala Ritmica</option>
-                <option value="Sala de reuniões do administrativo">Sala de reuniões do administrativo</option>
-                <option value="Campo de Futebol">Campo Futebol</option>
-                <option value="Ginásio G1 - Quandra 1">Ginásio G1 - Quandra 1</option>
-                <option value="Ginásio G1 - Quandra 2">Ginásio G1 - Quandra 2</option>
-                <option value="Ginásio G2 - Ginástica">Ginásio G2 - Ginástica</option>
-                <option value="Ginásio G2 - Lutas">Ginásio G2 - Lutas</option>
-        </select>
-        
+      
         <label>Data da reserva:<br>
         <div class="data-periodo">
         <input type="date" name="periodo1" id="periodo1"  size="20" placeholder="dd:mm:aaaa" > à
@@ -184,17 +178,11 @@
         <input type="time" name="horario2" id="horario2"  size="20" placeholder="hh:mm" required >
         </div>
         
-        <label for="tituloprojeto">Título do projeto de pesquisa aprovado:</label>
-        <input type="text" id="tituloprojeto" name="tituloprojeto" required>
-        
-        <label for="equipamentos">Equipamentos:</label>
-			<textarea id="equipamentos" name="equipamentos" rows="5" required></textarea>
-        
-        <label for="resposavel">Pesquisador responsável:</label>
-        <input type="text" id="resposavel" name="resposavel" required>
-            
-        <label for="resposavelcartao">Cartão UFRGS do pesquisador responsável:</label>
-        <input type="text" id="resposavelcartao" name="resposavelcartao" required>
+       
+         <label for="nocupantes">Nº estimado de ocupantes:</label>
+        <input type="text" id="nocupantes" name="nocupantes" required>
+      
+ 
         
       <label for="observacoes">Observações:</label>
 			<textarea id="observacoes" name="observacoes" rows="5"></textarea>

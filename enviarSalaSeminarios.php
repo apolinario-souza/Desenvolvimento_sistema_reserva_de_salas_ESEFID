@@ -4,19 +4,17 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $email = htmlspecialchars($_POST['email']);
     $vinculo = htmlspecialchars($_POST['vinculo']);
     
-    $cartao = htmlspecialchars($_POST['cartao']);
+    $finalidade = htmlspecialchars($_POST['finalidade']);
     $telefone = htmlspecialchars($_POST['telefone']);
     
     
-    $espaco = htmlspecialchars($_POST['espaco']);
+    
     $periodo1 = htmlspecialchars($_POST['periodo1']);
     $periodo2 = htmlspecialchars($_POST['periodo2']);
     $horario1 = htmlspecialchars($_POST['horario1']);
     $horario2 = htmlspecialchars($_POST['horario2']);
-    $tituloprojeto = htmlspecialchars($_POST['tituloprojeto']);
-    $equipamentos = htmlspecialchars($_POST['equipamentos']);
-    $resposavel = htmlspecialchars($_POST['resposavel']);
-    $resposavelcartao = htmlspecialchars($_POST['resposavelcartao']);
+    
+    $nocupantes = htmlspecialchars($_POST['nocupantes']);
     
    
     
@@ -25,22 +23,21 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     
     
     $to = "receplapex@ufrgs.br"; // Insira o endereço de e-mail desejado
-    $subject = "Reserva  $espaco";
+    $subject = "Reserva  SALA DE SEMINÁRIOS";
     
     $body = "Solicitante: $solicitante\n
     E-mail: $email\n
     Vinculo: $vinculo\n
    
     Telefone: $telefone\n
-    Cartao UFRGS n: $cartao\n
+    Finalidade: $finalidade\n
     
-    Espaco: $espaco\n
+    
     Data:  $periodo1 - $periodo2\n
     Horario:  $horario1 - $horario2\n
-    Titulo: $tituloprojeto\n
-    Equipamentos: $equipamentos\n
-    Responsável pela chave: $resposavel\n
-    N pesponsável pela chave: $resposavelcartao\n
+    N ocupantes:  $nocupantes\n
+    
+    
     
     
     Observaões: \n$observacoes\n";

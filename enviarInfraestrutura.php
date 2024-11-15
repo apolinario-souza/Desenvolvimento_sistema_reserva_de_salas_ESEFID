@@ -15,38 +15,37 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $nocupantes = htmlspecialchars($_POST['nocupantes']);
     $resposavel = htmlspecialchars($_POST['resposavel']);
     $resposavelcartao = htmlspecialchars($_POST['resposavelcartao']);
-    
-   
-    
     $observacoes = htmlspecialchars($_POST['observacoes']);
     
-    
-    
-    $to = "apolinario.souza@ufrgs.br"; // Insira o endereço de e-mail desejado
-    $subject = "Reserva  $espaco";
+    $to = "apolinario.souza@ufrgs.br";
+    $subject = "Reserva $espaco";
     
     $body = "Solicitante: $solicitante\n
     E-mail: $email\n
-    
     Telefone: $telefone\n
     Cartão UFRGS nº: $cartao\n
     Unidade: $unidade\n
     Espaço: $espaco\n
-    Data:  $periodo1 - $periodo2\n
-    Horário:  $horario1 - $horario2\n
+    Data: $periodo1 - $periodo2\n
+    Horário: $horario1 - $horario2\n
     Nº Ocupantes: $nocupantes\n
     Responsável pela chave: $resposavel\n
-    Nº pesponsável pela chave: $resposavelcartao\n
+    Nº responsável pela chave: $resposavelcartao\n
+    Observações: \n$observacoes\n";
     
+    $headers = "From: $email\r\n";
+    $headers .= "Reply-To: $email\r\n";
     
-    Observaões: \n$observacoes\n";
-    
-    // Aqui, use um endereço de e-mail do seu domínio
-    $headers = "From: edf.tercio@gmail.com\r\n"; // Altere para um e-mail válido do seu domínio
-    $headers .= "Reply-To: $email\r\n"; // Para permitir que as respostas sejam enviadas ao remetente
-
+    // Enviar e-mail para o destinatário principal
     if (mail($to, $subject, $body, $headers)) {
         echo "Mensagem enviada com sucesso!";
+        
+        // Enviar e-mail de confirmação para o solicitante
+        $confirmSubject = "Confirmação de Solicitação de Reserva";
+        $confirmBody = "Prezado(a) $solicitante,\nAgradecemos pela solicitação do $espaco para o dia $periodo1 ao dia $periodo2.\nSua solicitação está em processamento, e em breve enviaremos um e-mail com a confirmação.\n \n \nAtenciosamente,\nNúcleo de Infraestrutura\nTelefone: (51) 3308-5816\nE-mail: infraestruturaesefid@ufrgs.br";
+        $confirmHeaders = "From: apolinario.souza@ufrgs.br\r\n";
+        
+        mail($email, $confirmSubject, $confirmBody, $confirmHeaders);
     } else {
         echo "Erro ao enviar mensagem. Tente novamente.";
     }

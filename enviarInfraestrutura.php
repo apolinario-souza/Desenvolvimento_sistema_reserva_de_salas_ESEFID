@@ -17,21 +17,21 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $resposavelcartao = htmlspecialchars($_POST['resposavelcartao']);
     $observacoes = htmlspecialchars($_POST['observacoes']);
     
-    $to = "apolinario.souza@ufrgs.br";
+    $to = "infraestruturaesefid@ufrgs.br";
     $subject = "Reserva $espaco";
     
     $body = "Solicitante: $solicitante\n
     E-mail: $email\n
     Telefone: $telefone\n
-    Cartão UFRGS nº: $cartao\n
+    Cartao UFRGS: $cartao\n
     Unidade: $unidade\n
-    Espaço: $espaco\n
+    Espaco: $espaco\n
     Data: $periodo1 - $periodo2\n
-    Horário: $horario1 - $horario2\n
-    Nº Ocupantes: $nocupantes\n
-    Responsável pela chave: $resposavel\n
-    Nº responsável pela chave: $resposavelcartao\n
-    Observações: \n$observacoes\n";
+    Horario: $horario1 - $horario2\n
+    N Ocupantes: $nocupantes\n
+    Responsavel pela chave: $resposavel\n
+    Cartao UFRGS pela chave: $resposavelcartao\n
+    Observacoes: \n$observacoes\n";
     
     $headers = "From: $email\r\n";
     $headers .= "Reply-To: $email\r\n";
@@ -43,7 +43,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         // Enviar e-mail de confirmação para o solicitante
         $confirmSubject = "Confirmação de Solicitação de Reserva";
         $confirmBody = "Prezado(a) $solicitante,\nAgradecemos pela solicitação do $espaco para o dia $periodo1 ao dia $periodo2.\nSua solicitação está em processamento, e em breve enviaremos um e-mail com a confirmação.\n \n \nAtenciosamente,\nNúcleo de Infraestrutura\nTelefone: (51) 3308-5816\nE-mail: infraestruturaesefid@ufrgs.br";
-        $confirmHeaders = "From: apolinario.souza@ufrgs.br\r\n";
+        $confirmHeaders = "From: infraestruturaesefid@ufrgs.br\r\n";
         
         mail($email, $confirmSubject, $confirmBody, $confirmHeaders);
     } else {

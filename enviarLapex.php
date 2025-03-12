@@ -32,7 +32,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     Vinculo: $vinculo\n
    
     Telefone: $telefone\n
-    Cartao UFRGS n: $cartao\n
+    Cartao UFRGS: $cartao\n
     
     Espaco: $espaco\n
     Data:  $periodo1 - $periodo2\n
@@ -41,16 +41,21 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     Equipamentos: $equipamentos\n
     Responsável pela chave: $resposavel\n
     N pesponsável pela chave: $resposavelcartao\n
+    Observações: \n$observacoes\n";
     
+    $headers = "From: $email\r\n";
+    $headers .= "Reply-To: $email\r\n";
     
-    Observaões: \n$observacoes\n";
-    
-    // Aqui, use um endereço de e-mail do seu domínio
-    $headers = "From:receplapex@ufrgs.br\r\n"; // Altere para um e-mail válido do seu domínio
-    $headers .= "Reply-To: $email\r\n"; // Para permitir que as respostas sejam enviadas ao remetente
-
+    // Enviar e-mail para o destinatário principal
     if (mail($to, $subject, $body, $headers)) {
         echo "Mensagem enviada com sucesso!";
+        
+        // Enviar e-mail de confirmação para o solicitante
+        $confirmSubject = "Confirmação de Solicitação de Reserva";
+        $confirmBody = "Prezado(a) $solicitante,\nAgradecemos pela solicitação do $espaco para o dia $periodo1 ao dia $periodo2.\nSua solicitação está em processamento, e em breve enviaremos um e-mail com a confirmação.\n \n \nAtenciosamente,\nSecretaria do LAPEX\nTelefone: (51) 3308-5818\nE-mail: receplapex@ufrgs.br";
+        $confirmHeaders = "From: receplapex@ufrgs.br\r\n";
+        
+        mail($email, $confirmSubject, $confirmBody, $confirmHeaders);
     } else {
         echo "Erro ao enviar mensagem. Tente novamente.";
     }

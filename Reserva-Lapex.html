@@ -102,7 +102,7 @@
 <div class="container">
     <div class="header">
         <h1>RESERVA DE ESPAÇOS - ESEFID</h1>
-        <p>Laboratório de Pesquisa do Exercício - LAPEX</p>
+        <p>Núcleo Infraestrutura</p>
     </div>
 
     <div class="content">
@@ -138,8 +138,7 @@
       <label for="cartao">Cartão UFRGS nº:</label>
       <input type="text" id="cartao" name="cartao" required>
 		
-			
-			<label for="vinculo">Vínculo com UFRGS:</label>
+      <label for="vinculo">Vínculo com UFRGS:</label>
             <select id="vinculo" name="vinculo" required>
                 <option value="Servidor">Servidor</option>
                 <option value="Discente">Discente com vínculo ativo</option>
@@ -147,27 +146,23 @@
         </select>
       
       
-        
-     
-      
-      
       <h2>Dados da reserva</h2>
       <label for="espaco">Espaço:</label>
       <select id="espaco" name="espaco" required>
-          <option value="Sala 105 – Avaliação Postural">Sala 105 – Avaliação Postural</option>
-          <option value="Sala 106 – Biomecânica">Sala 106 – Biomecânica</option>
-          <option value="Sala 106 – Laboratório do Movimento">Sala 106 – Laboratório do Movimento</option>
+          <option value="Sala 105 Avaliacao Postural">Sala 105 – Avaliação Postural</option>
+          <option value="Sala 106 Biomecanica">Sala 106 – Biomecânica</option>
+          <option value="Sala 106 Laboratorio do Movimento">Sala 106 – Laboratório do Movimento</option>
           <option value="Sala 106 A">Sala 106 A</option>
           <option value="Sala 106 B">Sala 106 B</option>
-          <option value="Sala 106 C – Plasticidade Neuromuscular">Sala 106 C – Plasticidade Neuromuscular</option>
-          <option value="Sala 107 - DEXA">Sala 107 - DEXA</option>
-                <option value="Sala 109 - Neuromuscular">Sala 109 - Neuromuscular</option>
-                <option value="Sala 110 – Comportamento Motor">Sala 110 – Comportamento Motor</option>
-                <option value="Sala 112 – Fisiologia">Sala 112 – Fisiologia</option>
-                <option value="Sala 112 A – Ergometria">Sala 112 A – Ergometria</option>
-                <option value="Sala 112 B – Laboratório de Bioquímica">Sala 112 B – Laboratório de Bioquímica</option>
-                <option value=">Sala 203 - Seminários">Sala 203 - Seminários</option>
-                
+          <option value="Sala 106 C Plasticidade Neuromuscular">Sala 106 C – Plasticidade Neuromuscular</option>
+          <option value="Sala 107 DEXA">Sala 107 - DEXA</option>
+          <option value="Sala 109 Neuromuscular">Sala 109 - Neuromuscular</option>
+          <option value="Sala 110 Comportamento Motor">Sala 110 – Comportamento Motor</option>
+          <option value="Sala 112 Fisiologia">Sala 112 – Fisiologia</option>
+          <option value="Sala 112 A Ergometria">Sala 112 A – Ergometria</option>
+          <option value="Sala 112 B Laboratorio de Bioquimica">Sala 112 B – Laboratório de Bioquímica</option>
+          <option value="Sala 203 - Seminarios">Sala 203 - Seminários</option>
+          
         </select>
         
         <label>Data da reserva:<br>
@@ -185,14 +180,15 @@
         <label for="tituloprojeto">Título do projeto de pesquisa aprovado: (exceto sala de seminários)</label>
         <input type="text" id="tituloprojeto" name="tituloprojeto">
         
-        <label for="equipamentos">Equipamentos:(exceto sala de seminários)</label>
-			<textarea id="equipamentos" name="equipamentos" rows="5"></textarea>
         
-        <label for="resposavel">Pesquisador responsável: (exceto sala de seminários)</label>
+         <label for="equipamentos">Equipamentos:(exceto sala de seminários)</label>
+			<textarea id="equipamentos" name="equipamentos" rows="5"></textarea>
+            
+        <label for="resposavel">Pesquisador responsável (exceto sala de seminários):</label>
         <input type="text" id="resposavel" name="resposavel">
             
-        <label for="resposavelcartao">Cartão UFRGS do pesquisador responsável: (exceto sala de seminários)</label>
-        <input type="text" id="resposavelcartao" name="resposavelcartao">
+        <label for="resposavelcartao">Cartão UFRGS do responsável:</label>
+        <input type="text" id="resposavelcartao" name="resposavelcartao" required>
         
       <label for="observacoes">Observações:</label>
 			<textarea id="observacoes" name="observacoes" rows="5"></textarea>
